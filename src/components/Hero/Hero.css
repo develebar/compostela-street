@@ -1,0 +1,153 @@
+.hero {
+  position: relative;
+
+  width: 100%;
+  height: 100svh;
+  min-height: 700px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--yellow);
+}
+
+/* Fondo azul que podremos animar posteriormente */
+.hero__background {
+  position: absolute;
+  inset: 0;
+
+  background: var(--blue);
+
+  clip-path: polygon(0 0,
+      100% 0,
+      100% 72%,
+      0 100%);
+}
+
+/* Contenedor de la portada */
+.hero__visual {
+  position: relative;
+  z-index: 2;
+
+  width: min(72vw, 950px);
+  aspect-ratio: 16 / 10;
+
+  overflow: hidden;
+
+  transform: rotate(-2deg);
+
+  box-shadow: 18px 18px 0 var(--black);
+
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.6s ease;
+}
+
+.hero__visual:hover {
+  transform: rotate(0deg) scale(1.015);
+  box-shadow: 25px 25px 0 var(--pink);
+}
+
+.hero__visual img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* Información inferior izquierda */
+.hero__info {
+  position: absolute;
+  z-index: 5;
+
+  left: 32px;
+  bottom: 32px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero__info span:last-child {
+  color: var(--pink);
+}
+
+/* Scroll */
+.hero__scroll {
+  position: absolute;
+  z-index: 5;
+
+  right: 32px;
+  bottom: 32px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.hero__scroll-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  border: 2px solid var(--black);
+  border-radius: 50%;
+
+  font-size: 16px;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero__background {
+    clip-path: polygon(0 0,
+        100% 0,
+        100% 78%,
+        0 94%);
+  }
+
+  .hero__visual {
+    width: 88vw;
+
+    transform: rotate(-2deg);
+
+    box-shadow: 10px 10px 0 var(--black);
+  }
+
+  .hero__info {
+    left: 20px;
+    bottom: 24px;
+
+    font-size: 10px;
+  }
+
+  .hero__scroll {
+    right: 20px;
+    bottom: 24px;
+  }
+
+  .hero__scroll>span:first-child {
+    display: none;
+  }
+}
