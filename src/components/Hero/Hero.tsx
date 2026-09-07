@@ -1,4 +1,5 @@
 import "./Hero.css";
+import portada from "../../assets/Portada-Compostela-Street.webp";
 
 export default function Hero() {
   return (
@@ -7,8 +8,7 @@ export default function Hero() {
 
       <div className="hero__visual">
         <img
-          src="https://i0.wp.com/compostelastreet.gal/wp-content/uploads/2025/01/Portada-Compostela-Street.png?w=2000&ssl=1"
-          alt="Compostela Street"
+          src={portada}
         />
       </div>
 

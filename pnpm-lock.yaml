@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      gsap:
+        specifier: ^3.15.0
+        version: 3.15.0
       react:
         specifier: ^19.2.8
         version: 19.2.8
@@ -573,6 +576,9 @@ packages:
   globals@17.12.0:
     resolution: {integrity: sha512-cezEd/DTyyht9cvSSURyygXPfy04GtWO/5e6ZPvH7fCtjKz9PYOmuawphw1Ctd1f6C+5JypXfGD7ahNMXvevBA==}
     engines: {node: '>=18'}
+
+  gsap@3.15.0:
+    resolution: {integrity: sha512-dMW4CWBTUK1AEEDeZc1g4xpPGIrSf9fJF960qbTZmN/QwZIWY5wgliS6JWl9/25fpTGJrMRtSjGtOmPnfjZB+A==}
 
   hermes-estree@0.25.1:
     resolution: {integrity: sha512-0wUoCcLp+5Ev5pDW2OriHC2MJCbwLwuRx+gAqMTOkGKJJiBCLjtrvy4PWUGn6MIVefecRpzoOZ/UV6iGdOr+Cw==}
@@ -1441,6 +1447,8 @@ snapshots:
       is-glob: 4.0.3
 
   globals@17.12.0: {}
+
+  gsap@3.15.0: {}
 
   hermes-estree@0.25.1: {}
 

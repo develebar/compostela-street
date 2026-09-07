@@ -4,10 +4,9 @@ import "./Navigation.css";
 export default function Navigation() {
   return (
     <nav className="navigation">
-      <Link to="/" className="navigation__logo">
-        COMPOSTELA
-        <span>STREET</span>
-      </Link>
+      {/* <Link to="/" className="navigation__logo">
+        <img src={portada} alt="Compostela Street Festival" className="nav__logo" />
+      </Link> */}
 
       <div className="navigation__links">
         <Link to="/programa">Programa</Link>
